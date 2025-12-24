@@ -17,31 +17,25 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MemberService {
 
-    private final MemberRepository memberRepository;
+	private final MemberRepository memberRepository;
 
+	// ---------------------------------------------------------
+	// 1) ÜYE EKLE (DTO → Entity mapping)
+	// ---------------------------------------------------------
+	public void addMember(AddMemberDto dto) {
 
-    // ---------------------------------------------------------
-    // 1) ÜYE EKLE (DTO → Entity mapping)
-    // ---------------------------------------------------------
-    public void addMember(AddMemberDto dto) {
+		Member member = new Member();
+		member.setMemberName(dto.getMemberName());
 
-        Member member = new Member();
-        member.setMemberName(dto.getMemberName());
+		memberRepository.save(member);
+	}
 
-        memberRepository.save(member);
-    }
+	// ---------------------------------------------------------
+	// 2) TÜM ÜYELERİ LİSTELE (Entity → DTO mapping)
+	// ---------------------------------------------------------
 
-    // ---------------------------------------------------------
-    // 2) TÜM ÜYELERİ LİSTELE (Entity → DTO mapping)
-    // ---------------------------------------------------------
-    
-    public List<MemberListDto> listMembers() {
-        return memberRepository.findAll()
-                .stream()
-                .map(m -> new MemberListDto(
-                        m.getMemberId(),
-                        m.getMemberName()
-                ))
-                .collect(Collectors.toList());
-    }
-}   
+	public List<MemberListDto> listMembers() {
+		return memberRepository.findAll().stream().map(m -> new MemberListDto(m.getMemberId(), m.getMemberName()))
+				.collect(Collectors.toList());
+	}
+}

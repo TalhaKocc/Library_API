@@ -1,4 +1,4 @@
-package com.talhakoc.libraryproject.dto;
+package com.talhakoc.libraryproject.dto.book;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,9 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UpdateBookDto {
-    private Integer bookId;
-    private String bookName;
-    private String bookAuthor;
-    private String bookStatus;
+	private Integer bookId;
+	private String bookName;
+	private String bookAuthor;
+	private String bookStatus;
 }
-

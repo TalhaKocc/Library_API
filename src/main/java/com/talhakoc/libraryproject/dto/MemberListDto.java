@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class MemberListDto {
-    private Integer memberId;
-    private String memberName;
+	private Integer memberId;
+	private String memberName;
 }

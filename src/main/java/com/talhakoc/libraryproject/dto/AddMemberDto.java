@@ -4,6 +4,5 @@ import lombok.Data;
 
 @Data
 public class AddMemberDto {
-    private String memberName;
+	private String memberName;
 }
-

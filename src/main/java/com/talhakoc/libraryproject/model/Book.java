@@ -16,22 +16,20 @@ import lombok.Data;
 @Data
 public class Book {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "book_id")
-    private Integer bookId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "book_id")
+	private Integer bookId;
 
-    @Column(name = "book_name")
-    private String bookName;
+	@Column(name = "book_name")
+	private String bookName;
 
-    @Column(name = "book_author")
-    private String bookAuthor;
+	@Column(name = "book_author")
+	private String bookAuthor;
 
-    @Column(name = "book_status")
-    private String bookStatus;
+	@Column(name = "book_status")
+	private String bookStatus;
 
-
-    @OneToMany(mappedBy = "book")
-    private List<BookStatus> statusHistory;
+	@OneToMany(mappedBy = "book")
+	private List<BookStatus> statusHistory;
 }
-

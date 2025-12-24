@@ -16,14 +16,14 @@ import lombok.Data;
 @Data
 public class Member {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "member_id")
-    private Integer memberId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "member_id")
+	private Integer memberId;
 
-    @Column(name = "member_name")
-    private String memberName;
+	@Column(name = "member_name")
+	private String memberName;
 
-    @OneToMany(mappedBy = "member")
-    private List<BookStatus> borrowHistory;
+	@OneToMany(mappedBy = "member")
+	private List<BookStatus> borrowHistory;
 }

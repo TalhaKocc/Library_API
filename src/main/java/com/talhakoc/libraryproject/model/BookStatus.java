@@ -17,22 +17,19 @@ import lombok.Data;
 @Data
 public class BookStatus {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "status_id")
-    private Integer statusId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "status_id")
+	private Integer statusId;
 
+	@ManyToOne
+	@JoinColumn(name = "book_id", referencedColumnName = "book_id")
+	private Book book;
 
-    @ManyToOne
-    @JoinColumn(name = "book_id", referencedColumnName = "book_id")
-    private Book book;
+	@ManyToOne
+	@JoinColumn(name = "member_id", referencedColumnName = "member_id")
+	private Member member;
 
-
-    @ManyToOne
-    @JoinColumn(name = "member_id", referencedColumnName = "member_id")
-    private Member member;
-
-    @Column(name = "status_date")
-    private LocalDate statusDate;
+	@Column(name = "status_date")
+	private LocalDate statusDate;
 }
-
