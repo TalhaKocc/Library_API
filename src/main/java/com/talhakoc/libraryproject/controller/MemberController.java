@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.talhakoc.libraryproject.dto.AddMemberDto;
-import com.talhakoc.libraryproject.dto.MemberListDto;
+import com.talhakoc.libraryproject.dto.member.AddMemberDto;
+import com.talhakoc.libraryproject.dto.member.MemberListDto;
 import com.talhakoc.libraryproject.service.MemberService;
 
 import lombok.RequiredArgsConstructor;

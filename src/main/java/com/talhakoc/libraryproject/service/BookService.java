@@ -5,10 +5,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.talhakoc.libraryproject.dto.BorrowBookDto;
 import com.talhakoc.libraryproject.dto.book.AddBookDto;
 import com.talhakoc.libraryproject.dto.book.BookListDto;
 import com.talhakoc.libraryproject.dto.book.UpdateBookDto;
+import com.talhakoc.libraryproject.dto.book_status.BorrowBookDto;
 import com.talhakoc.libraryproject.model.Book;
 import com.talhakoc.libraryproject.model.BookStatus;
 import com.talhakoc.libraryproject.model.Member;

@@ -1,4 +1,4 @@
-package com.talhakoc.libraryproject.dto;
+package com.talhakoc.libraryproject.dto.book_status;
 
 import lombok.Data;
 

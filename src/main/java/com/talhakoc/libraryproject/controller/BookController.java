@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.talhakoc.libraryproject.dto.BorrowBookDto;
 import com.talhakoc.libraryproject.dto.book.AddBookDto;
 import com.talhakoc.libraryproject.dto.book.BookListDto;
 import com.talhakoc.libraryproject.dto.book.UpdateBookDto;
+import com.talhakoc.libraryproject.dto.book_status.BorrowBookDto;
 import com.talhakoc.libraryproject.service.BookService;
 
 import lombok.RequiredArgsConstructor;

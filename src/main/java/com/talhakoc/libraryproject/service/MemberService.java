@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.talhakoc.libraryproject.dto.AddMemberDto;
-import com.talhakoc.libraryproject.dto.MemberListDto;
+import com.talhakoc.libraryproject.dto.member.AddMemberDto;
+import com.talhakoc.libraryproject.dto.member.MemberListDto;
 import com.talhakoc.libraryproject.model.Member;
 
 import com.talhakoc.libraryproject.repository.MemberRepository;

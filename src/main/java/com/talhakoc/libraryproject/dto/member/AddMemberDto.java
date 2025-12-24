@@ -1,4 +1,4 @@
-package com.talhakoc.libraryproject.dto;
+package com.talhakoc.libraryproject.dto.member;
 
 import lombok.Data;
 
