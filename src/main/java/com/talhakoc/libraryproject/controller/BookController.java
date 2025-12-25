@@ -26,26 +26,17 @@ public class BookController {
 
 	private final BookService bookService;
 
-	// ---------------------------------------------------------
-	// 1) TÜM KİTAPLARI LİSTELE
-	// ---------------------------------------------------------
 	@GetMapping
 	public List<BookListDto> listBooks() {
 		return bookService.listBooks();
 	}
 
-	// ---------------------------------------------------------
-	// 2) YENİ KİTAP EKLE
-	// ---------------------------------------------------------
 	@PostMapping
 	public String addBook(@RequestBody AddBookDto dto) {
 		bookService.addBook(dto);
 		return "Kitap başarıyla eklendi.";
 	}
 
-	// ---------------------------------------------------------
-	// 3) KİTAP ÖDÜNÇ VERME
-	// ---------------------------------------------------------
 	@PostMapping("/{bookId}/borrow")
 	public String borrowBook(@PathVariable Integer bookId, @RequestBody BorrowBookDto dto) {
 
@@ -53,27 +44,18 @@ public class BookController {
 		return "Kitap ödünç verildi.";
 	}
 
-	// ---------------------------------------------------------
-	// 4) KİTAP İADE
-	// ---------------------------------------------------------
 	@PostMapping("/{bookId}/return")
 	public String returnBook(@PathVariable Integer bookId) {
 		bookService.returnBook(bookId);
 		return "Kitap iade edildi.";
 	}
 
-	// ---------------------------------------------------------
-	// 5) KİTAP GÜNCELLEME
-	// ---------------------------------------------------------
 	@PutMapping
 	public String updateBook(@RequestBody UpdateBookDto dto) {
 		bookService.updateBook(dto);
 		return "Kitap güncellendi.";
 	}
 
-	// ---------------------------------------------------------
-	// 6) KİTAP SİLME
-	// ---------------------------------------------------------
 	@DeleteMapping("/{id}")
 	public String deleteBook(@PathVariable Integer id) {
 		bookService.deleteBook(id);

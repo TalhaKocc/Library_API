@@ -21,18 +21,12 @@ public class MemberController {
 
 	private final MemberService memberService;
 
-	// ---------------------------------------------------------
-	// 1) ÜYE EKLE
-	// ---------------------------------------------------------
 	@PostMapping
 	public String addMember(@RequestBody AddMemberDto dto) {
 		memberService.addMember(dto);
 		return "Üye başarıyla eklendi.";
 	}
 
-	// ---------------------------------------------------------
-	// 2) TÜM ÜYELERİ LİSTELE
-	// ---------------------------------------------------------
 	@GetMapping
 	public List<MemberListDto> listMembers() {
 		return memberService.listMembers();
